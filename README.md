@@ -21,7 +21,7 @@ Requirements
 Usage
 ---------------------
 
-This plugin requires two inputs to run: the okta organization name and the okta api token. The okta base url is not required and will default to "okta.com" if left out.
+This plugin requires two inputs to run: the Okta organization name and the Okta API token. The Okta base url is not required and will default to "okta.com" if left out.
 
 You can specify the inputs in your tf plan:
 
@@ -33,7 +33,7 @@ provider "okta" {
 }
 ```
 
-OR you can specify environment variables:
+_or_ you can specify environment variables:
 
 ```
 OKTA_ORG_NAME=<okta instance name, e.g. dev-XXXXXX>
@@ -44,7 +44,7 @@ OKTA_BASE_URL=<okta base url, e.g. oktapreview.com>
 Examples
 --------
 
-As we build out resources we build concomitant acceptance tests that require use to create resource config that actually creates and modifies real resources. We decided to put these test fixtures to good use and provide them [as examples here.](./examples)
+As we build out resources, we build concomitant acceptance tests that require use to create resource config that actually creates and modifies real resources. We decided to put these test fixtures to good use and provide them [as examples here.](./examples)
 
 Building The Provider
 ---------------------
@@ -57,7 +57,7 @@ $ cd $GOPATH/src/github.com/articulate/terraform-provider-okta
 $ make
 ```
 
-For local development, I've found the below commands helpful. Run them from inside the terraform-provider-okta directory
+For local development, we've found the commands below to be helpful. Run them from inside the `terraform-provider-okta` directory:
 
 ```sh
 $ go build -o .terraform/plugins/$GOOS_$GOARCH/terraform-provider-okta
@@ -103,7 +103,7 @@ In order to test the provider, you can simply run `make test`. The acceptance te
 $ make test
 ```
 
-In order to run the full suite of Acceptance tests, run `make testacc`.
+In order to run the full suite of acceptance tests, run `make testacc`.
 
 *Note:* Acceptance tests create real resources, and often cost money to run.
 
